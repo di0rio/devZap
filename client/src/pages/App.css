@@ -1,0 +1,91 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+}
+
+.form-card {
+  width: 50%;
+  max-width: 350px;
+  padding: 0 25% 0 25%;
+}
+
+.background {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(
+    75deg,
+    #451952 0%,
+    #662549 25%,
+    #ae445a 50%,
+    #f39f5a 100%
+  );
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.form-title {
+  font-size: 42px;
+  font-family: "Avenir";
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #e8e8e8;
+  padding-bottom: 12px;
+}
+
+.form-subtitle {
+  font-size: 18px;
+  font-family: "Avenir";
+  letter-spacing: 0.5px;
+  color: #afafaf;
+  padding-bottom: 24px;
+}
+
+.auth {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 12px;
+}
+
+.auth-label {
+  position: absolute;
+  top: 8px;
+  left: 18px;
+  font-size: 11px;
+  color: rgb(175, 175, 175);
+  font-family: "Avenir";
+  width: 100px;
+}
+
+.auth-input {
+  background: #35404b;
+  color: white;
+  font-family: "Avenir";
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  padding: 24px 18px 12px 18px;
+  margin-bottom: 12px;
+  width: calc(100% - 36px);
+}
+
+.auth-button {
+  width: 100%;
+  height: 53px;
+  color: white;
+  background-color: #7c048b;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  font-family: "Avenir";
+  cursor: pointer;
+  transition: all 0.44s ease;
+  -webkit-transition: all 0.44s ease;
+  -moz-transition: all 0.44s ease;
+}
+
+.auth-button:hover {
+  filter: brightness(145%);
+  scale: 1.04;
+}
