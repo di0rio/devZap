@@ -1,9 +1,15 @@
-import React from "react";
+import axios from "axios";
 
-const Auth = () => {
-    const onSubmit = () => {
-
-    }
+const Auth = (props) => {
+  const onSubmit = (e) => {
+    e.preventDefault();
+    const { value } = e.target[0];
+    // console.log(value)
+    axios
+      .post(`${import.meta.env.VITE_API_URL}/auth`, { username: value })
+      .then((r) => props.onAuth({ ...r.data, secret: value }))
+      .catch((e) => console.log("Erro de autenticação", e));
+  };
   return (
     <div className="background">
       <form onSubmit={onSubmit} className="form-card">
@@ -14,7 +20,9 @@ const Auth = () => {
         <div className="auth">
           <div className="auth-label">Username</div>
           <input className="auth-input" type="username" />
-          <button className="auth-button" type="submit">Entrar</button>
+          <button className="auth-button" type="submit">
+            Entrar
+          </button>
         </div>
       </form>
     </div>

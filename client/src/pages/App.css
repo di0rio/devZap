@@ -89,3 +89,12 @@ body {
   filter: brightness(145%);
   scale: 1.04;
 }
+
+
+chat-wrapper{
+  height: 80vh;
+  width: 80%;
+  margin-left: 10%;
+  color: white;
+  background: rgb(43, 47, 60);
+}
